@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="file" id="fileInput" accept=".html,.htm" multiple>
+    <input type="button" value="更新歷史訂單" id="updateOrdersHistory">
+    <input type="button" value="清空歷史訂單" id="clearOrdersHistory">
+    <input type="button" value="查詢歷史訂單" id="getOrdersHistory">
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
