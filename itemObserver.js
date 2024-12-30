@@ -35,7 +35,6 @@ function modifyShopNames() {
     // get all orders in ordersArray where shopName is productTitle.innerText
     const orders = ordersArray.filter((order) => productTitle.innerText.indexOf(order.storeName) !== -1);
     // if orders is not empty
-    console.log(orders);
     if(orders.length) {
       // create an info icon button
       const infoButton = document.createElement('button');
@@ -100,7 +99,6 @@ function modifyShopNames() {
 const itemObserver = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.addedNodes.length) {
-      console.log("mutation added nodes");
       modifyShopNames();
     }
   });

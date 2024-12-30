@@ -133,8 +133,6 @@ function saveOrder(ordersArrayToAppend) {
 document.getElementById('updateOrdersHistory').addEventListener('click', function(_) {
   const fileInput = document.getElementById('fileInput');
   const files = Array.from(fileInput.files);
-  console.log(files);
-  console.log(typeof files)
   Promise.all(files.map((file) => {
     return getFileContent(file).then(
       (htmlString) => {
@@ -143,7 +141,6 @@ document.getElementById('updateOrdersHistory').addEventListener('click', functio
     );
   })).then(( newOrdersArray) => {
     const mergedArray = [].concat(...newOrdersArray);
-    console.log(mergedArray);
     saveOrder(mergedArray);
     fileInput.value = null;
   });
@@ -159,9 +156,7 @@ document.getElementById('clearOrdersHistory').addEventListener('click', async fu
 document.getElementById('getOrdersHistory').addEventListener('click', async function(event) {
   const orders = await getChromeStorage('orders');
   if(orders) {
-    console.log(orders);
   }
   else {
-    console.log('no data');
   }
 });
