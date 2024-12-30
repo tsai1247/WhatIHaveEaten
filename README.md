@@ -2,7 +2,7 @@
 - for mangotree users to know what they have eaten
 
 # Demo
-- Get your order detail from you business email box
+- Get your order detail(attached html files)  from you business email box
 ![alt text](assets/demo/demo-1.png)
 
 - Import all files and then update history
