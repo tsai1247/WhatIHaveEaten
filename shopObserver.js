@@ -22,7 +22,10 @@ function modifyShopNames() {
       return;
     }
 
-    const titleElements = document.querySelectorAll('div.title.text-primary-color');
+    const titleElements = [
+      ...document.querySelectorAll('div.title.text-primary-color'),
+      ...document.querySelectorAll('.Product-info > .Label-title')
+    ];
       
     titleElements.forEach(element => {
       const originalText = element.textContent.trim();
@@ -39,7 +42,6 @@ function modifyShopNames() {
 const shopObserver = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.addedNodes.length) {
-      console.log("mutation added nodes");
       modifyShopNames();
     }
   });
