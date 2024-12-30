@@ -151,12 +151,3 @@ document.getElementById('clearOrdersHistory').addEventListener('click', async fu
   await setChromeStorage('orders', null);
 });
 
-
-
-document.getElementById('getOrdersHistory').addEventListener('click', async function(event) {
-  const orders = await getChromeStorage('orders');
-  if(orders) {
-  }
-  else {
-  }
-});
